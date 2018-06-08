@@ -11,3 +11,6 @@
 - 强拓展性
 # 获取Beta版
 - 暂未开放
+# 帮助翻译
+- 假如你闲的慌，你可以fork这个仓库，创建分支en_US或者其他语言，然后将那些模块翻译成英文再用pull request提交给我。
+- 当然 我觉得[这里](https://github.com/xzr467706992/Lathanum_system_toolbox_v2/tree/strings)也需要校验
