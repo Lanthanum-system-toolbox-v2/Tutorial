@@ -12,5 +12,5 @@
 # 获取Beta版
 - 暂未开放
 # 帮助翻译
-- 假如你闲的慌，你可以fork这个仓库，将分支en_US中的模块们翻译成英文（只要把中文改成英文就行了），然后再用pull request提交给我。
+- 假如你闲的慌，你可以fork这个仓库，将分支[en_US](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/en_US)中的模块们翻译成英文（只要把中文改成英文就行了），然后再用pull request提交给我。
 - 当然 我觉得[这里](https://github.com/xzr467706992/Lathanum_system_toolbox_v2/tree/strings)的英文翻译也需要看看（神奇的机翻）
