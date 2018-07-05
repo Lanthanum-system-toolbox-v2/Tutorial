@@ -23,3 +23,12 @@
 # Pull Request
 - 假如你不仅仅想让你的 黑域服务器/新增的机型信息 显示在你手里的工具箱中，使用Github的pull request功能将它们提交给这个仓库吧！它们将在被合并后出现在新的工具箱版本中。
 - [什么是pull request?](https://www.baidu.com/s?wd=pull%20request%E6%95%99%E7%A8%8B&rsv_spt=1&rsv_iqid=0x8e5a885a0006e95c&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=98012088_5_dg&ch=12&rsv_enter=1&oq=pull%2520request&rsv_t=84c2ukWw2YO8yyRovbiiOtRlD40%2FTjXrunbF776CQsTZeb96JsnxkfiI%2BZ79y6dnWsxN5w&inputT=3432&rsv_pq=c9996590000715bd&rsv_sug3=47&rsv_sug1=31&rsv_sug7=100&rsv_sug2=0&rsv_sug4=4217)
+- 以下是本仓库分支的介绍
+- [master](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2)---各种教程信息的所在地
+- [device_list](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/device_list)---“机型修改”中的机型信息
+- [prevent_server_list](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/prevent_server_list)---黑域一键补丁服务器列表
+- [prevent_server_win](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/prevent_server_win)---黑域一键补丁windows服务端
+- [prevent_server_linux](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/prevent_server_linux)---黑域一键补丁linux服务端
+- [zh_CN](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/zh_CN)---工具箱中的功能（处理器高级配置/io/杂项等)的实现模块
+- [en_US](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/en_US)---同上，但是需要翻译成英文
+- [strings](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/strings)---工具箱内大多数显示的文本内容
