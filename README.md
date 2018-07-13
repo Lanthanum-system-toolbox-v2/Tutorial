@@ -1,7 +1,7 @@
 # 镧·系统工具箱 2.0
 欢迎来到镧·系统工具箱 2.0的官方Github仓库
 # 当前进度
-## 91%
+## 95%
 # 更新内容
 - 完全重写
 - 模块化构成 （ [中文模块仓库](https://github.com/xzr467706992/Lathanum_system_toolbox_v2/tree/zh_CN) ）
@@ -19,6 +19,7 @@
 - [搭建黑域一键补丁linux服务器](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/blob/prevent_server_linux/README.md)
 - [为“机型修改”增加内置机型](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/blob/master/tutorial/device_list.md)
 - [让你的黑域补丁服务器显示在软件中](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/blob/master/tutorial/prevent_server_module.md)
+- [为工具箱增加功能](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/blob/master/tutorial/standardModule.md)
 
 # Pull Request
 - 假如你不仅仅想让你的 黑域服务器/新增的机型信息 显示在你手里的工具箱中，使用Github的pull request功能将它们提交给这个仓库吧！它们将在被合并后出现在新的工具箱版本中。
