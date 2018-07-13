@@ -111,4 +111,181 @@ class=extra
 
 - 上面这个模块只会在build.prop存在时显示。准确的说，是button带领着整个模块显示的。（即使title和subtitle始终显示)
 
-### 未完待续
+### 组件们
+- 以下内容将会介绍各种组件的用法
+#### title与subtitle
+<pre><code>!module
+class=xxx
+  !view
+  view=title/subtitle
+  text=标题文字
+  @show
+  #return sth
+  @show
+  root=true/false
+  core=true/false
+  !view
+!module
+</code></pre>
+- 私有属性只有一个text，不多介绍
+#### switch开关
+<pre><code>!module
+class=xxx
+  !view
+  view=switch
+  text=启用（emm想写什么都行）
+  @show
+  #return sth
+  @show
+  @click
+  #此处提供变量$switch来显示当前switch状态
+  if [ $switch == 1 ]
+  then
+  #显示toast弹窗
+  echo @toast=开关是开启的
+  else
+  echo @toast=开关是关闭的
+  fi
+  @click
+  @current
+  #当前状态设置为打开状态
+  echo true
+  @current
+  root=true/false
+  core=true/false
+  !view
+!module
+</code></pre>
+- 私有属性：click,current
+#### button按钮
+<pre><code>!module
+class=xxx
+  !view
+  view=button
+  text=按钮文字
+  @show
+  #return sth
+  @show
+  @click
+  $do sth
+  @click
+  root=true/false
+  core=true/false
+  !view
+!module
+</code></pre>
+- 很简单 click
+#### edittext文本编辑框
+<pre><code>!module
+class=xxx
+  !view
+  view=edittext
+  text=文本框：
+  @show
+  #return sth
+  @show
+  @current
+  echo 我是当前内容内容
+  @current
+  @done
+  #提供变量$edittext
+  echo @toast=你输入了$edittext
+  @done
+  width=200
+  root=true/false
+  core=true/false
+  !view
+!module
+</code></pre>
+- done方法，代表在点击勾时的操作。
+- width属性。如果定义，则使用定义值作为输入框宽度。如果不定义，则使用默认值来作为宽度。（单位是dp，无需写上）
+#### spinner类似于处理器一般配置里的频率选择下拉菜单
+<pre><code>!module
+class=xxx
+  !view
+  view=spinner
+  //定义条目
+  item=我是第一条|我是第二条|我是第三条
+  #也可以item_file=[path]这是从系统中读取，适用于末尾有空格的类似于处理器频率表文件的解析
+  #也可以item_file_tcp=[path]这是从系统中读取，适用于末尾没空格的类似于处理器频率表文件的解析
+  #也可以item_file_io=[path]这是从系统中读取，适用于类似于IO调度器的类似格式解析（有兴趣看看IO调度器的那个模块）
+  text=选择一个条目：
+  @show
+  #return sth
+  @show
+  @current
+  #默认选中第二个条目
+  echo position=1
+  #也可以echo label=条目的文字内容
+  #也可以echo io_label=`cat [path]` 方便类IO调度器状态的解析
+  @current
+  @done
+  #提供变量$label与$position
+  echo @toast=当前点击了第$position个条目（从0开始算），条目的内容是$label
+  @done
+  root=true/false
+  core=true/false
+  !view
+!module
+</code></pre>
+- done属性与current属性提供多变量。
+#### seekbar 拖动条
+- 直接贴出高通Gpu调度激进程度控制来进行解读
+<pre><code>
+!module
+class=cpua
+!view
+view=title
+text=高通GPU调度配置
+@show
+echo true
+@show
+!view
+
+!view
+view=subtitle
+text=调整高通GPU调度的激进程度
+@show
+echo true
+@show
+!view
+
+!view
+view=seekbar
+//\s可以用来表示空格 你也可以直接打空格
+text=《——保守\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s激进——》
+@max
+#返回一个数字作为这个进度条的最大值
+cat /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+@max
+@show
+#在需要时显示
+if [ -e /sys/class/kgsl/kgsl-3d0/default_pwrlevel ]
+then
+echo true
+fi
+@show
+@current
+#当前状态
+#这里牵扯到一个小算法 因为gpu调度激进程度和数字时相反的。数字越大反而越不激进。因此我们需要将它倒回来。
+r=`cat /sys/class/kgsl/kgsl-3d0/default_pwrlevel`
+let c=max-r
+echo $c
+@current
+
+@done
+#我们提供了$max和$seekbar两个变量，分别代表最大值和当前值，方便计算。
+#下列算法又需要将它倒回来
+#此处千万不能去掉调用前的$ 即使它在bash下可以被去掉
+let r=$max-$seekbar
+echo $r > /sys/class/kgsl/kgsl-3d0/default_pwrlevel
+@done
+core=true
+root=true
+!view
+!module
+
+</pre></code>
+- 这个组件不算难 没什么可多讲的。
+- 还有一个text组件，拥有属性@text。作用是动态显示text。其它与title以及subtitle完全相同。
+### 假如你有不清楚的地方，可以去[官方模块仓库](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/zh_CN)一探究竟。
