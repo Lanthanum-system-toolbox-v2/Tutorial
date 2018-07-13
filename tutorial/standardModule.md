@@ -82,7 +82,7 @@ class=extra
   !view
 
   !view
-  //ui中加入的时按钮
+  //ui中加入的是按钮
   view=button
   
   root=true
@@ -185,7 +185,7 @@ class=xxx
   #return sth
   @show
   @current
-  echo 我是当前内容内容
+  echo 我是当前内容
   @current
   @done
   #提供变量$edittext
