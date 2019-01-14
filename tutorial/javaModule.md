@@ -60,3 +60,4 @@ public class TestModule implements LModule{
     }
 }
 ```
+![效果](https://raw.githubusercontent.com/xzr467706992/Lanthanum_system_toolbox_v2/master/tutorial/res/photo_2019-01-14_14-34-11.jpg)
