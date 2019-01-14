@@ -2,7 +2,7 @@
 #### Java模块具有真正的强拓展性，可以方便的制作一般功能性模块难以(人性化的)实现的功能
 ## 准备
 - 环境[Idea](https://www.jetbrains.com/idea/) （其实什么ide都行，就连aide也行，只不过需要一些hackly methods）
-- [LModule.jar](todo)
+- [LModule.jar](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/raw/LModule/out/artifacts/LModule_jar/LModule.jar)
 - Java环境（推荐[jdk8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)）
 - 编程语言其实是不限的，只要能最终生成可运行的*.jar就可以
 ## 开始
