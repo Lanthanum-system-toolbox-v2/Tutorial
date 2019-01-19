@@ -12,4 +12,4 @@
 - <code>ro.product.device=xxxx</code>
 - 定义完毕后 写入<code>!device</code>作为结尾
 - 然后 可以使用 加载第三方模块 进行测试运行
-- [Demo](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/device_list)
+- [Demo](https://github.com/Lanthanum-system-toolbox-v2/Devices)
