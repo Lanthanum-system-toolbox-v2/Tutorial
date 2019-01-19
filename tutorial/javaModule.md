@@ -2,7 +2,7 @@
 #### Java模块具有真正的强拓展性，可以方便的制作一般功能性模块难以(人性化的)实现的功能
 ## 准备
 - 环境[Idea](https://www.jetbrains.com/idea/) （其实什么ide都行，就连aide也行，只不过需要一些hackly methods）
-- [LModule.jar](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/raw/LModule/out/artifacts/LModule_jar/LModule.jar)
+- [LModule.jar](https://github.com/Lanthanum-system-toolbox-v2/LModule/raw/LModule/out/artifacts/LModule_jar/LModule.jar)
 - Java环境（推荐[jdk8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)）
 - 编程语言其实是不限的，只要能最终生成可运行的*.jar就可以
 ## 开始
@@ -12,7 +12,7 @@
 - 将这个类继承LModule接口(`public class Test implements LModule{}`)，并且重写需要重写的方法（点public class那一行然后ALT+ENTER，选择`Implement methods`，然后点ok）
 - 撸代码
 - [Build Artifacts](https://blog.csdn.net/aspkhdp/article/details/79573196) 来导出jar
-- 使用[Class2dex](https://github.com/xzr467706992/Lanthanum_system_toolbox_v2/tree/class2dex_tools)工具转换为可被加载的模块
+- 使用[Class2dex](https://github.com/Lanthanum-system-toolbox-v2/Class2dex.git)工具转换为可被加载的模块
 ## Demo
 - 里面包含了目前sdk提供的所有东西的介绍（不包含android sdk部分)
 ```
@@ -60,4 +60,4 @@ public class TestModule implements LModule{
     }
 }
 ```
-![效果](https://raw.githubusercontent.com/xzr467706992/Lanthanum_system_toolbox_v2/master/tutorial/res/photo_2019-01-14_14-34-11.jpg)
+![效果](https://raw.githubusercontent.com/Lanthanum-system-toolbox-v2/Tutorial/master/tutorial/res/photo_2019-01-14_14-34-11.jpg)
