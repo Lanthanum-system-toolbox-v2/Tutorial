@@ -28,7 +28,7 @@ public class TestModule implements LModule{
 
     @Override
     public String classname() {
-        return "cpua";//决定在哪个页面出现，页面列表见功能型模块教程
+        return "cpua";//决定在哪个页面出现，页面列表见功能型模块教程。java模块特有页面"tools"
     }
 
     @Override
