@@ -47,7 +47,7 @@ public class TestModule implements LModule{
         linearLayout.addView(subtitle);
 
         TextView textView= new TextView(context);
-        textView.setText(ShellUtil.run("ls /system",true));//一个标准执行shell的方法，第一个参数为命令，第二个参数为是否使用root权限，返回类型为string
+        textView.setText(ShellUtil.run("ls /system",true));//一个标准执行shell的方法，第一个参数为命令，第二个参数为是否使用root权限，返回类型为string。已经合并了错误流，不区分错误与正常返回。如果命令返回内容为空，则该方法返回""而不是null。
         linearLayout.addView(textView);
 
         return linearLayout;
